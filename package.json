@@ -12,7 +12,8 @@
     "url": "https://github.com/Drawbotics/fnfy/issues"
   },
   "homepage": "https://github.com/Drawbotics/fnfy#readme",
-  "main": "src/index.js",
+  "main": "dist/fnfy.js",
+  "module": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist && rimraf lib",
     "lint": "eslint --ext js,jsx --format node_modules/eslint-formatter-pretty src/",
