@@ -1,0 +1,23 @@
+{
+  "name": "fnfy",
+  "version": "0.1.0",
+  "description": "A small set of tools to ease the usage of React without JSX.",
+  "author": "Lars",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drawbotics/fnfy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Drawbotics/fnfy/issues"
+  },
+  "homepage": "https://github.com/Drawbotics/fnfy#readme",
+  "main": "src/index.js",
+  "scripts": {},
+  "peerDependencies": {
+    "react": "16.8.x"
+  },
+  "devDependencies": {
+    "react": "16.8.x"
+  }
+}
