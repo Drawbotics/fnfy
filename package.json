@@ -13,11 +13,34 @@
   },
   "homepage": "https://github.com/Drawbotics/fnfy#readme",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "clean": "rimraf dist && rimraf lib",
+    "lint": "eslint --ext js,jsx --format node_modules/eslint-formatter-pretty src/",
+    "build:umd": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:module": "NODE_ENV=production babel src --out-dir lib/",
+    "build": "npm run clean && npm run build:umd && npm run build:module",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
     "react": "16.8.x"
   },
   "devDependencies": {
-    "react": "16.8.x"
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@drawbotics/check-env": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "better-webpack-progress": "^1.1.0",
+    "eslint": "^5.16.0",
+    "eslint-formatter-pretty": "^2.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "react": "16.8.x",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.29.6",
+    "webpack-stylish": "^0.1.8"
   }
 }

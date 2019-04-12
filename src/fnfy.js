@@ -1,4 +1,4 @@
-import React, { Fragment, forwardRef, useRef, createElement, cloneElement as _cloneElement } from 'react';
+import { Fragment, useRef, createElement, cloneElement as _cloneElement } from 'react';
 
 import Instance from './Instance';
 
