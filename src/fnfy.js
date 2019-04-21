@@ -26,16 +26,21 @@ export function cloneElement(element, props = {}) {
 
 export default function fnfy(Component) {
   const componentName = Component.displayName || Component.name;
+  let prevInst = null;
 
   const Fnfy = (props = {}) => {
     let { children, inst, ...rest } = props;
     children = Array.isArray(children) ? children : [ children ];
 
+    if (prevInst == null || prevInst.id !== inst?.id) {
+      prevInst = _wrapInst(inst);
+    }
+
     if (typeof Component === 'string' || Component === Fragment) {
       return createElement(Component, { ...rest }, ...children);
     }
 
-    return createElement(Component, { ...rest, inst: _wrapInst(inst) }, ...children);
+    return createElement(Component, { ...rest, inst: prevInst }, ...children);
   };
 
   Fnfy.displayName = `Fnfy(${componentName})`;

@@ -1,6 +1,10 @@
 class Instance {
   _setInstanceFn = () => ({});
 
+  constructor() {
+    this.id = Math.random();
+  }
+
   getInstance() {
     return this._setInstanceFn();
   }
