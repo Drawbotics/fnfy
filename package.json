@@ -1,6 +1,6 @@
 {
   "name": "fnfy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A small set of tools to ease the usage of React without JSX.",
   "author": "Lars",
   "license": "UNLICENSED",
@@ -46,5 +46,8 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-stylish": "^0.1.8"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.0"
   }
 }

@@ -1,4 +1,5 @@
 import { Fragment, useRef, createElement, cloneElement as _cloneElement } from 'react';
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
 import Instance from './Instance';
 
@@ -45,5 +46,5 @@ export default function fnfy(Component) {
 
   Fnfy.displayName = `Fnfy(${componentName})`;
 
-  return Fnfy;
+  return hoistNonReactStatics(Fnfy, Component);
 }
